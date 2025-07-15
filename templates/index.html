@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>선명상 프로그램</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>선명상 프로그램</h1>
+    <div id="typewriter" class="typewriter"></div>
+    <div id="main-content"></div>
+  </div>
+  <script src="{{ url_for('static', filename='typewriter.js') }}"></script>
+  <script>
+    window.onload = function() {
+      startMeditationApp();
+    }
+  </script>
+</body>
+</html> 
