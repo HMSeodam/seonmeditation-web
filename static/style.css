@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&family=SUIT:wght@400;700&family=Pretendard:wght@400;700&family=Inter:wght@400;700&display=swap');
+
 body {
     background: #f7faff;
     font-family: 'SF Pro Display', 'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', '맑은 고딕', Arial, sans-serif;
@@ -224,178 +226,62 @@ body {
         font-size: 1.5rem; /* 24px 기준, 더 크게 */
     }
     body {
-        background: #f7faff;
+        font-family: 'Urbanist', 'SUIT', 'Pretendard', 'Inter', 'Apple SD Gothic Neo', 'SF Pro Display', 'Roboto', 'Noto Sans KR', Arial, sans-serif;
         font-weight: 600;
+        background: #f7faff;
+        animation: fadein 1.2s cubic-bezier(.39,.575,.565,1);
     }
     .appbar {
-        font-size: 1.25rem;
-        font-family: 'SF Pro Display', 'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', '맑은 고딕', Arial, sans-serif;
+        font-family: 'Urbanist', 'SUIT', 'Pretendard', 'Inter', 'Apple SD Gothic Neo', 'SF Pro Display', 'Roboto', 'Noto Sans KR', Arial, sans-serif;
+        box-shadow: 0 2px 16px 0 rgba(80,80,120,0.10);
+        animation: fadein 1.2s cubic-bezier(.39,.575,.565,1);
     }
     .container, .main-area, .card {
         background: #f7faff;
     }
+    .card {
+        border-radius: 1.2em;
+        box-shadow: 0 6px 32px 0 rgba(80,80,120,0.13);
+        animation: fadein 1.2s cubic-bezier(.39,.575,.565,1);
+        transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .card:active {
+        box-shadow: 0 2px 8px 0 rgba(80,80,120,0.10);
+        transform: scale(0.98);
+    }
     .typewriter, .typewriter-text {
         font-size: 1.25rem;
         font-weight: 700;
+        font-family: inherit;
+        animation: fadein 1.2s cubic-bezier(.39,.575,.565,1);
     }
     label {
         font-size: 1.15rem;
         font-weight: 700;
+        font-family: inherit;
     }
     textarea, .main-input, .main-textarea {
         font-size: 1.15rem;
-        font-family: 'SF Pro Display', 'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', '맑은 고딕', Arial, sans-serif;
+        font-family: inherit;
         font-weight: 600;
+        border-radius: 1em;
+        box-shadow: 0 2px 12px 0 rgba(80,80,120,0.10);
+        transition: box-shadow 0.2s, background 0.2s;
+        background: #fff;
+        animation: fadein 1.2s cubic-bezier(.39,.575,.565,1);
     }
-    .voice-btn {
-        position: absolute;
-        right: 0.5rem;
-        bottom: 1.5rem; /* 기존보다 6px(=약 2mm) 위로 */
-        width: 2.2rem;
-        height: 2.2rem;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 2;
+    textarea:focus {
+        box-shadow: 0 4px 24px 0 rgba(80,80,120,0.16);
+        background: #f3f4f6;
     }
-    .survey-options {
-        gap: 0.2rem;
+    /* 선명상 기록지 음성인식 버튼 입력창 내부 오른쪽 하단 */
+    .reflection-card .input-wrapper {
+        position: relative;
     }
-    .survey-options label {
-        font-size: 1.05rem;
-        padding: 0.3rem 0.7rem;
-        border-radius: 0.5rem;
-        min-width: 2.1rem;
-        text-align: center;
-        font-weight: 700;
-    }
-    .container {
-      padding: 4vw 2vw 10vw 2vw;
-      max-width: 100vw;
-      min-width: 0;
-      border-radius: 0;
-      box-shadow: none;
-      margin-top: 56px;
-    }
-    .appbar {
-      font-size: 1.15rem;
-      padding: 0;
-      margin: 0;
-      background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
-      box-shadow: 0 2px 8px rgba(60,60,120,0.10);
-    }
-    h1 {
-      display: none;
-    }
-    .typewriter, .reflection-guide, .input-label {
-      font-size: 1.08rem;
-      color: #222;
-      margin-bottom: 10px;
-    }
-    .survey-form, .input-btns, .focus-group {
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 2px 12px rgba(60,60,120,0.08);
-      padding: 18px 12px 12px 12px;
-      margin-bottom: 18px;
-    }
-    .main-btn, .voice-btn-red {
-      font-size: 1.13rem;
-      min-width: 90vw;
-      min-height: 48px;
-      padding: 14px 0;
-      border-radius: 18px;
-      margin: 0 0 14px 0;
-      width: 100%;
-      max-width: 100%;
-      box-sizing: border-box;
-      display: block;
-      box-shadow: 0 2px 8px rgba(60,60,120,0.10);
-      letter-spacing: 1px;
-    }
-    .main-input, .main-textarea {
-      font-size: 1.13rem;
-      padding: 18px 16px 18px 16px;
-      min-width: 0;
-      width: 100%;
-      box-sizing: border-box;
-      border-radius: 16px;
-      background: #f8fafc;
-      border: 1.5px solid #c7d2fe;
-      margin-bottom: 18px;
-      box-shadow: 0 1px 6px rgba(60,60,120,0.06);
-    }
-    .input-btns {
-      flex-direction: column;
-      gap: 10px;
-      align-items: stretch;
-      background: none;
-      box-shadow: none;
-      padding: 0;
-      margin-bottom: 18px;
-    }
-    .focus-btns {
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 12px;
-      justify-content: space-between;
-    }
-    .focus-btn {
-      font-size: 1.13rem;
-      padding: 14px 0;
-      min-width: 40vw;
-      width: 44vw;
-      border-radius: 14px;
-      margin-bottom: 8px;
-      background: #f3f4f6;
-      color: #222;
-      border: 2px solid #c7d2fe;
-      box-shadow: 0 1px 6px rgba(60,60,120,0.06);
-      transition: background 0.2s, color 0.2s, border 0.2s;
-    }
-    .focus-btn.selected, .focus-btn:active {
-      background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
-      color: #fff;
-      border: 2px solid #6366f1;
-    }
-    .input-with-mic {
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-      margin-bottom: 18px;
-    }
-    .input-with-mic .main-input,
-    .input-with-mic .main-textarea {
-      padding-right: 54px;
-      padding-bottom: 12px;
-    }
-    .input-with-mic .voice-btn-circle {
-      position: absolute;
-      right: 10px;
-      bottom: 10px;
-      z-index: 2;
-      width: 44px;
-      height: 44px;
-      min-width: 44px;
-      min-height: 44px;
-      max-width: 44px;
-      max-height: 44px;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 8px rgba(211,47,47,0.10);
-    }
-    .mic-svg {
-      width: 28px;
-      height: 28px;
-    }
-    /* 마지막 선명상 기록지 음성인식 버튼 위치 조정 */
     .reflection-card .voice-btn {
         position: absolute;
         right: 0.5rem;
-        bottom: calc(100% + 160px); /* 입력창 기준 4cm(160px) 위로 */
+        bottom: 0.5rem;
         width: 2.2rem;
         height: 2.2rem;
         border-radius: 50%;
@@ -403,27 +289,56 @@ body {
         align-items: center;
         justify-content: center;
         z-index: 2;
+        background: #f7faff;
+        box-shadow: 0 2px 8px 0 rgba(80,80,120,0.13);
+        transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+        animation: fadein 1.2s cubic-bezier(.39,.575,.565,1);
     }
-    /* 수우미양가(집중도) 버튼 가로 한 줄에 */
+    .reflection-card .voice-btn:active {
+        background: #e0e7ff;
+        box-shadow: 0 1px 4px 0 rgba(80,80,120,0.10);
+        transform: scale(0.93);
+    }
+    /* 수우미양가(집중도) 버튼 가로 한 줄에, 작고 넓게 */
     .survey-options {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        gap: 0.15rem;
+        gap: 0.1em;
         margin-top: 0.3rem;
     }
     .survey-options label {
-        font-size: 1.01rem;
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.5rem;
-        min-width: 1.8rem;
-        text-align: center;
-        font-weight: 700;
-        margin: 0;
         flex: 1 1 0;
-        box-sizing: border-box;
+        min-width: 0;
+        padding: 0.4em 0.2em;
+        margin: 0 0.1em;
+        font-size: 1.1rem;
+        border-radius: 0.7em;
+        font-weight: 700;
+        background: #fff;
+        box-shadow: 0 1px 6px 0 rgba(80,80,120,0.10);
+        text-align: center;
+        transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+        animation: fadein 1.2s cubic-bezier(.39,.575,.565,1);
+    }
+    .survey-options label:active {
+        background: #e0e7ff;
+        box-shadow: 0 2px 8px 0 rgba(80,80,120,0.13);
+        transform: scale(0.96);
     }
     .survey-options input[type="radio"] {
         margin-right: 0.2rem;
+    }
+    /* 버튼 애니메이션 */
+    button, .download-btn {
+        transition: box-shadow 0.2s, background 0.2s, transform 0.15s;
+        animation: fadein 1.2s cubic-bezier(.39,.575,.565,1);
+        box-shadow: 0 2px 8px 0 rgba(80,80,120,0.13);
+        font-family: inherit;
+    }
+    button:active, .download-btn:active {
+        background: #e0e7ff;
+        box-shadow: 0 1px 4px 0 rgba(80,80,120,0.10);
+        transform: scale(0.97);
     }
   } 
