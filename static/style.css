@@ -341,4 +341,44 @@ body {
         box-shadow: 0 1px 4px 0 rgba(80,80,120,0.10);
         transform: scale(0.97);
     }
+    /* h1(선명상 프로그램) 숨김 */
+    h1 {
+        display: none !important;
+    }
+    /* 상단 여백 최소화 */
+    .container, .main-area {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    .card {
+        margin-top: 0 !important;
+        padding-top: 0.7em !important;
+    }
+    /* 수우미양가(집중도) 버튼 가운데 정렬, 더 작게 */
+    .survey-options {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.05em;
+        margin-top: 0.2rem;
+    }
+    .survey-options label {
+        flex: 0 1 auto;
+        min-width: 1.3em;
+        min-height: 1.3em;
+        padding: 0.18em 0.18em;
+        margin: 0 0.05em;
+        font-size: 0.98rem;
+        border-radius: 0.5em;
+        font-weight: 700;
+        background: #fff;
+        box-shadow: 0 1px 4px 0 rgba(80,80,120,0.10);
+        text-align: center;
+        transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+        animation: fadein 1.2s cubic-bezier(.39,.575,.565,1);
+    }
+    .survey-options input[type="radio"] {
+        margin-right: 0.1em;
+    }
   } 
