@@ -1,53 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>명상 앱</title>
-    <link rel="stylesheet" href="/static/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>선명상 프로그램</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="appbar">
-        <span class="appbar-icon"><i class="fas fa-spa"></i></span>
-        <span class="appbar-title">명상</span>
-    </div>
-    <main class="main-area">
-        <section class="card typewriter-card">
-            <div id="typewriter" class="typewriter-text"></div>
-        </section>
-        <section class="card reflection-card">
-            <label for="reflection">오늘의 명상에서 느낀 점을 적어보세요</label>
-            <div class="input-wrapper">
-                <textarea id="reflection" name="reflection" rows="3" placeholder="여기에 입력..." autocomplete="off"></textarea>
-                <button type="button" class="voice-btn" onclick="startVoice('reflection')" tabindex="-1">
-                    <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="10" fill="#f3f4f6"/><path d="M12 17c1.66 0 3-1.34 3-3V9a3 3 0 0 0-6 0v5c0 1.66 1.34 3 3 3zm5-3v-1h-2v1a5 5 0 0 1-10 0v-1H7v1a7 7 0 0 0 14 0z" fill="#4f46e5"/></svg>
-                </button>
-            </div>
-            <div class="action-row">
-                <button type="button" class="submit-btn">제출하기</button>
-                <button type="button" class="voice-btn" onclick="startVoice('reflection')" tabindex="-1">
-                    <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="10" fill="#f3f4f6"/><path d="M12 17c1.66 0 3-1.34 3-3V9a3 3 0 0 0-6 0v5c0 1.66 1.34 3 3 3zm5-3v-1h-2v1a5 5 0 0 1-10 0v-1H7v1a7 7 0 0 0 14 0z" fill="#4f46e5"/></svg>
-                </button>
-            </div>
-        </section>
-        <section class="card survey-card">
-            <label>오늘 명상 만족도</label>
-            <div class="survey-options">
-                <label><input type="radio" name="satisfaction" value="1"> 1</label>
-                <label><input type="radio" name="satisfaction" value="2"> 2</label>
-                <label><input type="radio" name="satisfaction" value="3"> 3</label>
-                <label><input type="radio" name="satisfaction" value="4"> 4</label>
-                <label><input type="radio" name="satisfaction" value="5"> 5</label>
-            </div>
-        </section>
-        <section class="card download-card">
-            <button class="download-btn" onclick="downloadRecord()">
-                <i class="fas fa-download"></i> 기록 다운로드
-            </button>
-        </section>
-    </main>
-    <script src="/static/script.js"></script>
+  <div class="appbar">선명상 프로그램</div>
+  <div class="container">
+    <h1>선명상 프로그램</h1>
+    <div id="typewriter" class="typewriter"></div>
+    <div id="main-content"></div>
+  </div>
+  <script src="{{ url_for('static', filename='typewriter.js') }}"></script>
+  <script>
+    window.onload = function() {
+      startMeditationApp();
+    }
+  </script>
 </body>
 </html> 
