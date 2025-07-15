@@ -234,7 +234,7 @@ body {
     .appbar {
         font-family: 'Urbanist', 'SUIT', 'Pretendard', 'Inter', 'Apple SD Gothic Neo', 'SF Pro Display', 'Roboto', 'Noto Sans KR', Arial, sans-serif;
         box-shadow: 0 2px 16px 0 rgba(80,80,120,0.10);
-        animation: fadein 1.2s cubic-bezier(.39,.575,.565,1);
+        /* animation: fadein 1.2s cubic-bezier(.39,.575,.565,1); */
     }
     .container, .main-area, .card {
         background: #f7faff;
@@ -383,7 +383,7 @@ body {
         flex: 1 1 0;
         min-width: 0;
         min-height: 1.1em;
-        padding: 0.12em 0.06em;
+        padding: 0.12em 0.03em; /* 좌우 padding을 더 줄임 */
         margin: 0 0.01em;
         font-size: 0.93rem;
         border-radius: 0.4em;
@@ -397,6 +397,7 @@ body {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        line-height: 1.6;
     }
     .survey-options input[type="radio"] {
         margin-right: 0.08em;
@@ -508,7 +509,7 @@ body {
         flex: 1 1 0;
         min-width: 0;
         min-height: 1.1em;
-        padding: 0.12em 0.06em;
+        padding: 0.12em 0.03em;
         margin: 0 0.01em;
         font-size: 0.93rem;
         border-radius: 0.4em;
