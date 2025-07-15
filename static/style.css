@@ -391,4 +391,39 @@ body {
       width: 28px;
       height: 28px;
     }
+    /* 마지막 선명상 기록지 음성인식 버튼 위치 조정 */
+    .reflection-card .voice-btn {
+        position: absolute;
+        right: 0.5rem;
+        bottom: calc(100% + 160px); /* 입력창 기준 4cm(160px) 위로 */
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+    /* 수우미양가(집중도) 버튼 가로 한 줄에 */
+    .survey-options {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0.15rem;
+        margin-top: 0.3rem;
+    }
+    .survey-options label {
+        font-size: 1.01rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
+        min-width: 1.8rem;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+        flex: 1 1 0;
+        box-sizing: border-box;
+    }
+    .survey-options input[type="radio"] {
+        margin-right: 0.2rem;
+    }
   } 
