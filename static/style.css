@@ -1,9 +1,9 @@
 body {
-    background: linear-gradient(135deg, #f7faff 0%, #e0e7ff 100%);
-    font-family: 'Noto Sans KR', '맑은 고딕', Arial, sans-serif;
+    background: #f7faff;
+    font-family: 'SF Pro Display', 'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', '맑은 고딕', Arial, sans-serif;
     color: #222;
     margin: 0;
-  }
+}
   .appbar {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -220,8 +220,55 @@ body {
     background: url('data:image/svg+xml;utf8,<svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="10" height="14" x="7" y="3" rx="5"/><rect width="2" height="6" x="11" y="17" rx="1"/><rect width="12" height="2" x="6" y="19" rx="1"/></svg>') center/contain no-repeat;
   }
   @media (max-width: 700px) {
+    html {
+        font-size: 1.5rem; /* 24px 기준, 더 크게 */
+    }
     body {
-      background: linear-gradient(135deg, #f7faff 0%, #e0e7ff 100%);
+        background: #f7faff;
+        font-weight: 600;
+    }
+    .appbar {
+        font-size: 1.25rem;
+        font-family: 'SF Pro Display', 'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', '맑은 고딕', Arial, sans-serif;
+    }
+    .container, .main-area, .card {
+        background: #f7faff;
+    }
+    .typewriter, .typewriter-text {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+    label {
+        font-size: 1.15rem;
+        font-weight: 700;
+    }
+    textarea, .main-input, .main-textarea {
+        font-size: 1.15rem;
+        font-family: 'SF Pro Display', 'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', '맑은 고딕', Arial, sans-serif;
+        font-weight: 600;
+    }
+    .voice-btn {
+        position: absolute;
+        right: 0.5rem;
+        bottom: 1.5rem; /* 기존보다 6px(=약 2mm) 위로 */
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+    .survey-options {
+        gap: 0.2rem;
+    }
+    .survey-options label {
+        font-size: 1.05rem;
+        padding: 0.3rem 0.7rem;
+        border-radius: 0.5rem;
+        min-width: 2.1rem;
+        text-align: center;
+        font-weight: 700;
     }
     .container {
       padding: 4vw 2vw 10vw 2vw;
