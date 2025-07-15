@@ -4,6 +4,21 @@ body {
   color: #222;
   margin: 0;
 }
+.appbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 56px;
+  background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(60,60,120,0.08);
+  letter-spacing: 1px;
+}
 .container {
   max-width: 600px;
   margin: 40px auto;
@@ -12,6 +27,7 @@ body {
   box-shadow: 0 8px 32px rgba(60,60,120,0.08);
   padding: 40px 32px 32px 32px;
   animation: fadein 1.2s;
+  margin-top: 56px;
 }
 @keyframes fadein {
   from { opacity: 0; transform: translateY(40px); }
@@ -205,26 +221,28 @@ h1 {
 }
 @media (max-width: 700px) {
   .container {
-    padding: 10vw 2vw 10vw 2vw;
+    padding: 6vw 2vw 10vw 2vw;
     max-width: 100vw;
     min-width: 0;
     border-radius: 0;
     box-shadow: none;
+    margin-top: 56px;
   }
-  h1 {
-    font-size: 1.3rem;
-    margin-bottom: 16px;
+  h1, .appbar {
+    font-size: 1.15rem;
+    padding: 0;
+    margin: 0;
   }
   .typewriter, .reflection-guide, .input-label {
     font-size: 1.05rem;
   }
   .main-btn, .voice-btn-red, .voice-btn-circle {
-    font-size: 1.05rem;
-    min-width: 44vw;
-    min-height: 44px;
-    padding: 12px 0;
-    border-radius: 12px;
-    margin: 0 0 10px 0;
+    font-size: 1.12rem;
+    min-width: 90vw;
+    min-height: 48px;
+    padding: 14px 0;
+    border-radius: 16px;
+    margin: 0 0 12px 0;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -236,37 +254,38 @@ h1 {
     align-items: stretch;
   }
   .main-input, .main-textarea {
-    font-size: 1.05rem;
-    padding: 12px;
+    font-size: 1.12rem;
+    padding: 16px;
     min-width: 0;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 14px;
   }
   .focus-btns {
     flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 8px;
+    gap: 8px;
+    margin-top: 10px;
   }
   .focus-btn {
-    font-size: 1.05rem;
-    padding: 10px 0;
-    min-width: 18vw;
+    font-size: 1.12rem;
+    padding: 12px 0;
+    min-width: 40vw;
     width: 44vw;
-    border-radius: 10px;
-    margin-bottom: 4px;
+    border-radius: 12px;
+    margin-bottom: 6px;
   }
   .input-with-mic .voice-btn-circle {
     right: 4px;
-    bottom: 10px;
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    min-height: 36px;
-    max-width: 36px;
-    max-height: 36px;
+    bottom: 14px;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
   }
   .mic-svg {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
   }
 } 
