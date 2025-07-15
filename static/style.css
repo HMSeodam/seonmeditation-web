@@ -345,40 +345,59 @@ body {
     h1 {
         display: none !important;
     }
-    /* 상단 여백 최소화 */
+    /* 상단 앱바 아래로만 내용 시작, 전체 폭 꽉 차게 */
     .container, .main-area {
-        margin-top: 0 !important;
+        margin-top: 56px !important;
         padding-top: 0 !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        box-sizing: border-box;
     }
     .card {
         margin-top: 0 !important;
         padding-top: 0.7em !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        box-sizing: border-box;
     }
-    /* 수우미양가(집중도) 버튼 가운데 정렬, 더 작게 */
+    /* 수우미양가(집중도) 버튼 한 줄, 화면 밖으로 안넘어가게 */
     .survey-options {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 0.05em;
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        gap: 0.01em;
         margin-top: 0.2rem;
+        box-sizing: border-box;
     }
     .survey-options label {
-        flex: 0 1 auto;
-        min-width: 1.3em;
-        min-height: 1.3em;
-        padding: 0.18em 0.18em;
-        margin: 0 0.05em;
-        font-size: 0.98rem;
-        border-radius: 0.5em;
+        flex: 1 1 0;
+        min-width: 0;
+        min-height: 1.1em;
+        padding: 0.12em 0.08em;
+        margin: 0 0.01em;
+        font-size: 0.93rem;
+        border-radius: 0.4em;
         font-weight: 700;
         background: #fff;
         box-shadow: 0 1px 4px 0 rgba(80,80,120,0.10);
         text-align: center;
         transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
         animation: fadein 1.2s cubic-bezier(.39,.575,.565,1);
+        box-sizing: border-box;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .survey-options input[type="radio"] {
-        margin-right: 0.1em;
+        margin-right: 0.08em;
+    }
+    /* 불필요한 패딩/마진 최소화 */
+    .main-area, .card, .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
   } 
