@@ -469,4 +469,9 @@ body {
         line-height: 1.6;
         max-width: calc(20% - 0.04em);
     }
+    .main-input, .main-textarea {
+      max-width: 100% !important;
+      font-size: 0.95rem !important;
+      padding: 0.7em 0.7em !important;
+    }
   } 
